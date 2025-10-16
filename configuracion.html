@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración del Sistema</title>
+    <link rel="stylesheet" href="estilos/styles5.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="header">
+                <h1>RRHH Municipal</h1>
+                <p>Administrador de RRHH</p>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="expedientes.html">Gestión de Expedientes</a></li>
+                <li><a href="asistencia.html">Control de Asistencia</a></li>
+                <li><a href="reportes.html">Reportes y Análisis</a></li>
+                <li><a href="configuracion.html">Configuración</a></li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <header>
+                <h1>Configuración del Sistema</h1>
+            </header>
+
+            <!-- Configuración del Sistema -->
+            <section class="configuracion-sistema">
+                <h2>Configuración del Sistema</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="actualizacion">Período de Actualización (días)</label>
+                        <input type="number" id="actualizacion" name="actualizacion" value="30" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="horas-laborales">Horas Laborales por Día</label>
+                        <input type="number" id="horas-laborales" name="horas-laborales" value="8" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="frecuencia-respaldo">Frecuencia de Respaldos</label>
+                        <select id="frecuencia-respaldo" name="frecuencia-respaldo" required>
+                            <option value="diario">Diario</option>
+                            <option value="semanal">Semanal</option>
+                            <option value="mensual">Mensual</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn">Guardar Cambios</button>
+                </form>
+            </section>
+
+            <!-- Configuración de Notificaciones -->
+            <section class="configuracion-notificaciones">
+                <h2>Configuración de Notificaciones</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="alerta-vencimiento">Alertas de Vencimiento de Documentos</label>
+                        <input type="checkbox" id="alerta-vencimiento" checked>
+                    </div>
+                    <div class="form-group">
+                        <label for="alerta-asistencia">Alertas de Asistencia</label>
+                        <input type="checkbox" id="alerta-asistencia" checked>
+                    </div>
+                    <div class="form-group">
+                        <label for="actualizaciones-sistema">Actualizaciones del Sistema</label>
+                        <input type="checkbox" id="actualizaciones-sistema" checked>
+                    </div>
+                    <div class="form-group">
+                        <label for="registro-auditoria">Registro de Auditoría</label>
+                        <input type="checkbox" id="registro-auditoria">
+                    </div>
+                    <button type="submit" class="btn">Guardar Cambios</button>
+                </form>
+            </section>
+
+            <!-- Gestión de Usuarios y Roles -->
+            <section class="gestion-usuarios">
+                <h2>Gestión de Usuarios y Roles</h2>
+                <div class="usuario-role">
+                    <h3>Administrador de RRHH</h3>
+                    <p>Control total del sistema, modificación de expedientes</p>
+                    <p>Usuarios: Juana Esperanza Aguilar, Cécily Guinea</p>
+                    <button class="btn">Ver Usuarios</button>
+                </div>
+                <div class="usuario-role">
+                    <h3>Controlador de Asistencia</h3>
+                    <p>Registro de asistencia, visualización limitada</p>
+                    <p>Usuarios: Usuario 1, Usuario 2</p>
+                    <button class="btn">Ver Usuarios</button>
+                </div>
+                <div class="usuario-role">
+                    <h3>Empleado</h3>
+                    <p>Visualización de datos propios, solicitudes</p>
+                    <p>Usuarios: 24 empleados activos</p>
+                    <button class="btn">Ver Usuarios</button>
+                </div>
+            </section>
+
+            <!-- Registro de Auditoría -->
+            <section class="registro-auditoria">
+                <h2>Registro de Auditoría</h2>
+                <div class="auditoria-item">
+                    <p><strong>Expediente modificado</strong> | Usuario: Cécily Guinea | Objetivo: María García López</p>
+                    <p><strong>Fecha:</strong> 13/08/2025 - 14:30</p>
+                </div>
+                <div class="auditoria-item">
+                    <p><strong>Nuevo empleado agregado</strong> | Usuario: Juana Esperanza Aguilar | Objetivo: Carlos Mendoza Silva</p>
+                    <p><strong>Fecha:</strong> 12/08/2025 - 10:15</p>
+                </div>
+                <div class="auditoria-item">
+                    <p><strong>Reporte generado</strong> | Usuario: Cécily Guinea | Objetivo: Reporte de Asistencia</p>
+                    <p><strong>Fecha:</strong> 10/08/2025 - 16:45</p>
+                </div>
+                <button class="btn">Ver Completo</button>
+            </section>
+
+            <!-- Estado del Sistema -->
+            <section class="estado-sistema">
+                <h2>Estado del Sistema</h2>
+                <div class="estado-item">
+                    <p><strong>Base de Datos:</strong> Funcionando Correctamente</p>
+                </div>
+                <div class="estado-item">
+                    <p><strong>Seguridad:</strong> Todos los Permisos OK</p>
+                </div>
+                <div class="estado-item">
+                    <p><strong>Último Respaldo:</strong> Hoy - 02:00 AM</p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

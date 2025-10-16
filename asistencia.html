@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Asistencia</title>
+    <link rel="stylesheet" href="estilos/styles3.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="header">
+                <h1>RRHH Municipal</h1>
+                <p>Administrador de RRHH</p>
+            </div>
+            <ul class="menu">
+               <li><a href="index.html">Dashboard</a></li>
+                <li><a href="expedientes.html">Gestión de Expedientes</a></li>
+                <li><a href="asistencia.html">Control de Asistencia</a></li>
+                <li><a href="reportes.html">Reportes y Análisis</a></li>
+                <li><a href="configuracion.html">Configuración</a></li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <header>
+                <h1>Registro de Asistencia - 13 de Agosto, 2025</h1>
+            </header>
+            <section class="registro-asistencia">
+                <form>
+                    <div class="form-group">
+                        <label for="empleado">Empleado*</label>
+                        <select id="empleado" name="empleado" required>
+                            <option value="">Seleccionar empleado...</option>
+                            <option value="1">María García López</option>
+                            <option value="2">Juan Pérez Morales</option>
+                            <option value="3">Carlos Mendoza Silva</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo-registro">Tipo de Registro*</label>
+                        <select id="tipo-registro" name="tipo-registro" required>
+                            <option value="">Seleccionar tipo...</option>
+                            <option value="entrada">Entrada</option>
+                            <option value="salida">Salida</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="hora">Hora*</label>
+                        <input type="time" id="hora" name="hora" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="observaciones">Observaciones</label>
+                        <textarea id="observaciones" name="observaciones" rows="4" placeholder="Observaciones adicionales, justificaciones, etc."></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn">Registrar Asistencia</button>
+                        <button type="button" class="btn">Ver Asistencia de Hoy</button>
+                    </div>
+                </form>
+            </section>
+            <section class="ultimos-registros">
+                <h2>Últimos Registros</h2>
+                <div class="registro">
+                    <p><strong>María García López</strong> - Entrada <span class="status normal">Normal</span> - <span class="time">08:00 AM</span></p>
+                </div>
+                <div class="registro">
+                    <p><strong>Juan Pérez Morales</strong> - Entrada <span class="status tardanza">Tardanza</span> - <span class="time">08:15 AM</span></p>
+                </div>
+                <div class="registro">
+                    <p><strong>Carlos Mendoza Silva</strong> - Entrada <span class="status normal">Normal</span> - <span class="time">07:55 AM</span></p>
+                </div>
+                <div class="instrucciones">
+                    <h3>Instrucciones:</h3>
+                    <ul>
+                        <li>Registra cada entrada y salida del empleado</li>
+                        <li>Las observaciones son obligatorias para justificar ausencias</li>
+                        <li>Mantén un registro completo según el formato municipal actual</li>
+                        <li>Los registros se guardan automáticamente para contraloría</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

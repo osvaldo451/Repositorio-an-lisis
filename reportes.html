@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes y Análisis</title>
+    <link rel="stylesheet" href="/estilos/styles4.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="header">
+                <h1>RRHH Municipal</h1>
+                <p>Administrador de RRHH</p>
+            </div>
+            <ul class="menu">
+                 <li><a href="index.html">Dashboard</a></li>
+                <li><a href="expedientes.html">Gestión de Expedientes</a></li>
+                <li><a href="asistencia.html">Control de Asistencia</a></li>
+                <li><a href="reportes.html">Reportes y Análisis</a></li>
+                <li><a href="configuracion.html">Configuración</a></li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <header>
+                <h1>Reportes y Análisis</h1>
+                <p>Generación de reportes ejecutivos y análisis de datos</p>
+            </header>
+            
+            <!-- Reportes Generados -->
+            <section class="reportes-generados">
+                <div class="stat">
+                    <h3>12</h3>
+                    <p>Reportes Generados Este Mes</p>
+                </div>
+                <div class="stat">
+                    <h3>24</h3>
+                    <p>Empleados Activos</p>
+                </div>
+                <div class="stat">
+                    <h3>89%</h3>
+                    <p>Promedio Asistencia</p>
+                </div>
+                <div class="stat">
+                    <h3>3</h3>
+                    <p>Auditorías Realizadas</p>
+                </div>
+            </section>
+
+            <!-- Formulario Generar Reporte -->
+            <section class="generar-reporte">
+                <h2>Generar Nuevo Reporte</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="tipo-reporte">Tipo de Reporte</label>
+                        <select id="tipo-reporte" name="tipo-reporte" required>
+                            <option value="">Seleccionar tipo de reporte...</option>
+                            <option value="asistencia">Reporte de Asistencia</option>
+                            <option value="personal">Listado de Personal</option>
+                            <option value="contratos">Estado de Contratos</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="periodo">Período</label>
+                        <select id="periodo" name="periodo" required>
+                            <option value="este-mes">Este Mes</option>
+                            <option value="ultimo-mes">Último Mes</option>
+                            <option value="personalizado">Personalizado</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn">Generar Reporte</button>
+                </form>
+            </section>
+
+            <!-- Reportes Recientes -->
+            <section class="reportes-recientes">
+                <h2>Reportes Recientes</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tipo de Reporte</th>
+                            <th>Fecha de Generación</th>
+                            <th>Generado Por</th>
+                            <th>Estado</th>
+                            <th>Tamaño</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Reporte de Asistencia</td>
+                            <td>10 de Agosto, 2025</td>
+                            <td>Cécily Guinea</td>
+                            <td class="completed">Completado</td>
+                            <td>2.3 MB</td>
+                            <td><button class="download-btn">Descargar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Listado de Personal</td>
+                            <td>08 de Agosto, 2025</td>
+                            <td>Juana Esperanza Aguilar</td>
+                            <td class="completed">Completado</td>
+                            <td>1.1 MB</td>
+                            <td><button class="download-btn">Descargar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Estado de Contratos</td>
+                            <td>05 de Agosto, 2025</td>
+                            <td>Cécily Guinea</td>
+                            <td class="completed">Completado</td>
+                            <td>856 KB</td>
+                            <td><button class="download-btn">Descargar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Análisis de Asistencia -->
+            <section class="analisis">
+                <div class="analisis-item">
+                    <h3>Promedio Mensual</h3>
+                    <p>89%</p>
+                </div>
+                <div class="analisis-item">
+                    <h3>Tardanzas Este Mes</h3>
+                    <p>8</p>
+                </div>
+                <div class="analisis-item">
+                    <h3>Ausencias Justificadas</h3>
+                    <p>12</p>
+                </div>
+                <div class="analisis-item">
+                    <h3>Empleados Puntuales</h3>
+                    <p>21/24</p>
+                </div>
+            </section>
+
+            <!-- Estado de Expedientes -->
+            <section class="estado-expedientes">
+                <div class="estado-item">
+                    <p>Expedientes Completos</p>
+                    <p>21/24</p>
+                </div>
+                <div class="estado-item">
+                    <p>Documentos Por Vencer</p>
+                    <p>5</p>
+                </div>
+                <div class="estado-item">
+                    <p>Actualizaciones Pendientes</p>
+                    <p>3</p>
+                </div>
+                <div class="estado-item">
+                    <p>Contratos Vigentes</p>
+                    <p>24</p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
