@@ -1,86 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Gestión de RRHH Municipal</title>
-    <link rel="stylesheet" href="estilos/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard — RRHH Municipal</title>
+  <link rel="stylesheet" href="estilos/styles.css" />
 </head>
 <body>
-    <div class="container">
-        <nav class="sidebar">
-            <div class="header">
-                <h1>RRHH Municipal</h1>
-                <p>Administrador de RRHH</p>
-            </div>
-            <ul class="menu">
-                <li><a href="index.html">Dashboard</a></li>
-                <li><a href="expedientes.html">Gestión de Expedientes</a></li>
-                <li><a href="asistencia.html">Control de Asistencia</a></li>
-                <li><a href="reportes.html">Reportes y Análisis</a></li>
-                <li><a href="configuracion.html">Configuración</a></li>
-            </ul>
-        </nav>
-        <main class="main-content">
-            <header>
-                <h1>Sistema de Gestión de RRHH Municipal</h1>
-                <p>13 de Agosto, 2025</p>
-            </header>
-            <section class="dashboard">
-                <div class="stats">
-                    <div class="stat">
-                        <h3>24</h3>
-                        <p>Empleados Activos</p>
-                    </div>
-                    <div class="stat">
-                        <h3>3</h3>
-                        <p>Expedientes Incompletos</p>
-                    </div>
-                    <div class="stat">
-                        <h3>5</h3>
-                        <p>Vencen en 30 días</p>
-                    </div>
-                    <div class="stat">
-                        <h3>89%</h3>
-                        <p>Asistencia Promedio</p>
-                    </div>
-                </div>
-                <div class="alert">
-                    <p><strong>¡Alertas Importantes!</strong> 5 empleados tienen documentos que vencen en los próximos 30 días. Se requiere renovación antes del vencimiento para evitar sanciones.</p>
-                </div>
-            </section>
-            <section class="actions">
-                <div class="action">
-                    <h2>Gestión de Expedientes</h2>
-                    <p>Control completo de información de empleados</p>
-                    <button class="btn">Ver Todos los Empleados</button>
-                    <button class="btn">+ Agregar Empleado</button>
-                    <button class="btn alert-btn">Documentos Pendientes</button>
-                </div>
-                <div class="action">
-                    <h2>Reportes y Análisis</h2>
-                    <p>Generación de reportes ejecutivos</p>
-                    <button class="btn">Reporte de Asistencia</button>
-                    <button class="btn">Listado de Personal</button>
-                    <button class="btn">Estado de Contratos</button>
-                    <button class="btn">Auditoría del Sistema</button>
-                </div>
-                <div class="action">
-                    <h2>Documentos y Constancias</h2>
-                    <p>Generación automática de documentos</p>
-                    <button class="btn">Generar Constancia Laboral</button>
-                    <button class="btn">Copias de Contrato</button>
-                    <button class="btn">Actas de Labores</button>
-                </div>
-                <div class="action">
-                    <h2>Configuración del Sistema</h2>
-                    <p>Administración y configuraciones</p>
-                    <button class="btn">Período de Actualización</button>
-                    <button class="btn">Registro de Auditoría</button>
-                    <button class="btn">Gestión de Usuarios</button>
-                </div>
-            </section>
-        </main>
+  <div class="app">
+    
+    <nav class="sidebar" aria-label="Principal">
+      <div class="brand">
+        <h1 class="brand__title">RRHH Municipal</h1>
+        <p class="brand__role">Administrador de RRHH</p>
+      </div>
+      <ul class="menu">
+        <li><a class="menu__link is-active" href="index.html">Dashboard</a></li>
+        <li><a class="menu__link " href="expedientes.html">Gestión de Expedientes</a></li>
+        <li><a class="menu__link " href="asistencia.html">Control de Asistencia</a></li>
+        <li><a class="menu__link " href="reportes.html">Reportes y Análisis</a></li>
+        <li><a class="menu__link " href="configuracion.html">Configuración</a></li>
+      </ul>
+    </nav>
+    
+    <main class="main">
+      
+<header class="page-header">
+  <div>
+    <h2 class="page-title">Sistema de Gestión de RRHH Municipal</h2>
+    <p class="page-subtitle">Octubre 2025</p>
+  </div>
+</header>
+
+<section aria-labelledby="resumen">
+  <h3 id="resumen" class="sr-only">Resumen</h3>
+
+  <div class="stats">
+    <article class="stat">
+      <h4 class="stat__value">24</h4>
+      <p class="stat__label">Empleados Activos</p>
+    </article>
+    <article class="stat">
+      <h4 class="stat__value">3</h4>
+      <p class="stat__label">Expedientes Incompletos</p>
+    </article>
+    <article class="stat">
+      <h4 class="stat__value">5</h4>
+      <p class="stat__label">Vencen en 30 días</p>
+    </article>
+    <article class="stat">
+      <h4 class="stat__value">89%</h4>
+      <p class="stat__label">Asistencia Promedio</p>
+    </article>
+  </div>
+
+  <div class="alert" role="alert">
+    <p><strong>¡Alertas!</strong> 5 empleados con documentos por vencer en 30 días.</p>
+  </div>
+</section>
+
+<section class="grid-2" aria-labelledby="acciones">
+  <h3 id="acciones" class="sr-only">Acciones rápidas</h3>
+
+  <article class="card">
+    <header>
+      <h4 class="card__title">Gestión de Expedientes</h4>
+      <p class="card__desc">Control de información de empleados</p>
+    </header>
+    <div class="card__actions">
+      <button class="btn">Ver Todos</button>
+      <button class="btn">+ Agregar</button>
+      <button class="btn btn--warn">Pendientes</button>
     </div>
+  </article>
+
+  <article class="card">
+    <header>
+      <h4 class="card__title">Reportes y Análisis</h4>
+      <p class="card__desc">Reportes ejecutivos</p>
+    </header>
+    <div class="card__actions">
+      <button class="btn">Asistencia</button>
+      <button class="btn">Personal</button>
+      <button class="btn">Contratos</button>
+      <button class="btn">Auditoría</button>
+    </div>
+  </article>
+
+  <article class="card">
+    <header>
+      <h4 class="card__title">Documentos y Constancias</h4>
+      <p class="card__desc">Generación automática</p>
+    </header>
+    <div class="card__actions">
+      <button class="btn">Constancia Laboral</button>
+      <button class="btn">Copias de Contrato</button>
+      <button class="btn">Actas de Labores</button>
+    </div>
+  </article>
+
+  <article class="card">
+    <header>
+      <h4 class="card__title">Configuración del Sistema</h4>
+      <p class="card__desc">Administración</p>
+    </header>
+    <div class="card__actions">
+      <button class="btn">Periodo</button>
+      <button class="btn">Auditoría</button>
+      <button class="btn">Usuarios</button>
+    </div>
+  </article>
+</section>
+
+    </main>
+  </div>
 </body>
 </html>

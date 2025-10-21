@@ -1,106 +1,103 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Empleados</title>
-    <link rel="stylesheet" href="/estilos/syles2.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Expedientes — RRHH Municipal</title>
+  <link rel="stylesheet" href="estilos/styles.css" />
 </head>
 <body>
-    <div class="container">
-        <nav class="sidebar">
-            <div class="header">
-                <h1>RRHH Municipal</h1>
-                <p>Administrador de RRHH</p>
-            </div>
-            <ul class="menu">
-                <li><a href="index.html">Dashboard</a></li>
-                <li><a href="expedientes.html">Gestión de Expedientes</a></li>
-                <li><a href="asistencia.html">Control de Asistencia</a></li>
-                <li><a href="reportes.html">Reportes y Análisis</a></li>
-                <li><a href="configuracion.html">Configuración</a></li>
-            </ul>
-        </nav>
-        <main class="main-content">
-            <header>
-                <h1>Lista de Empleados</h1>
-                <div class="actions">
-                    <input type="text" class="search" placeholder="Buscar por nombre, DPI o cargo">
-                    <button class="btn">Buscar</button>
-                    <button class="btn">Nuevo Empleado</button>
-                </div>
-            </header>
-            <section class="table-section">
-                <div class="filters">
-                    <button class="filter-btn">Todos (4)</button>
-                    <button class="filter-btn">Expedientes Incompletos (1)</button>
-                    <button class="filter-btn">Próximos a Vencer (1)</button>
-                </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>DPI</th>
-                            <th>Nombre Completo</th>
-                            <th>Cargo</th>
-                            <th>Estado Expediente</th>
-                            <th>Último Contrato</th>
-                            <th>Documentos Pendientes</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>2545678901101</td>
-                            <td>María García López</td>
-                            <td>Secretaria Municipal</td>
-                            <td class="complete">Completo</td>
-                            <td>CT-2024-001</td>
-                            <td>Ninguno</td>
-                            <td>
-                                <button class="btn edit-btn">Editar</button>
-                                <button class="btn view-btn">Ver</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2545678901102</td>
-                            <td>Juan Pérez Morales</td>
-                            <td>Conserje</td>
-                            <td class="incomplete">Incompleto</td>
-                            <td>CT-2024-002</td>
-                            <td>Antecedentes (022)</td>
-                            <td>
-                                <button class="btn edit-btn">Editar</button>
-                                <button class="btn view-btn">Ver</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2545678901103</td>
-                            <td>Ana Rodríguez Castro</td>
-                            <td>Tesorera</td>
-                            <td class="expiring">Por Vencer</td>
-                            <td>CT-2024-003</td>
-                            <td>Fianza (029) - 12 días</td>
-                            <td>
-                                <button class="btn edit-btn">Editar</button>
-                                <button class="btn view-btn">Ver</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2545678901104</td>
-                            <td>Carlos Mendoza Silva</td>
-                            <td>Contador</td>
-                            <td class="complete">Completo</td>
-                            <td>CT-2024-004</td>
-                            <td>Ninguno</td>
-                            <td>
-                                <button class="btn edit-btn">Editar</button>
-                                <button class="btn view-btn">Ver</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-        </main>
-    </div>
+  <div class="app">
+    
+    <nav class="sidebar" aria-label="Principal">
+      <div class="brand">
+        <h1 class="brand__title">RRHH Municipal</h1>
+        <p class="brand__role">Administrador de RRHH</p>
+      </div>
+      <ul class="menu">
+        <li><a class="menu__link " href="index.html">Dashboard</a></li>
+        <li><a class="menu__link is-active" href="expedientes.html">Gestión de Expedientes</a></li>
+        <li><a class="menu__link " href="asistencia.html">Control de Asistencia</a></li>
+        <li><a class="menu__link " href="reportes.html">Reportes y Análisis</a></li>
+        <li><a class="menu__link " href="configuracion.html">Configuración</a></li>
+      </ul>
+    </nav>
+    
+    <main class="main">
+      
+<header class="page-header">
+  <div>
+    <h1 class="page-title">Gestión de Expedientes</h1>
+    <p class="page-subtitle">Listado y estado de documentos</p>
+  </div>
+  <div class="form-actions">
+    <input type="text" placeholder="Buscar por nombre, DPI o cargo" />
+    <button class="btn">Buscar</button>
+    <button class="btn">Nuevo Empleado</button>
+  </div>
+</header>
+
+<section>
+  <div class="form-actions" style="margin-bottom:10px;">
+    <button class="btn btn--ghost">Todos (4)</button>
+    <button class="btn btn--ghost">Incompletos (1)</button>
+    <button class="btn btn--ghost">Por vencer (1)</button>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>DPI</th>
+        <th>Nombre Completo</th>
+        <th>Cargo</th>
+        <th>Estado</th>
+        <th>Último Contrato</th>
+        <th>Doc. Pendientes</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2545678901101</td>
+        <td>María García López</td>
+        <td>Secretaria Municipal</td>
+        <td><span class="badge badge--ok">Completo</span></td>
+        <td>CT-2024-001</td>
+        <td>Ninguno</td>
+        <td><button class="btn">Editar</button> <button class="btn">Ver</button></td>
+      </tr>
+      <tr>
+        <td>2545678901102</td>
+        <td>Juan Pérez Morales</td>
+        <td>Conserje</td>
+        <td><span class="badge badge--warn">Incompleto</span></td>
+        <td>CT-2024-002</td>
+        <td>Antecedentes (022)</td>
+        <td><button class="btn">Editar</button> <button class="btn">Ver</button></td>
+      </tr>
+      <tr>
+        <td>2545678901103</td>
+        <td>Ana Rodríguez Castro</td>
+        <td>Tesorera</td>
+        <td><span class="badge badge--pending">Por Vencer</span></td>
+        <td>CT-2024-003</td>
+        <td>Fianza (029) - 12 días</td>
+        <td><button class="btn">Editar</button> <button class="btn">Ver</button></td>
+      </tr>
+      <tr>
+        <td>2545678901104</td>
+        <td>Carlos Mendoza Silva</td>
+        <td>Contador</td>
+        <td><span class="badge badge--ok">Completo</span></td>
+        <td>CT-2024-004</td>
+        <td>Ninguno</td>
+        <td><button class="btn">Editar</button> <button class="btn">Ver</button></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+    </main>
+  </div>
 </body>
 </html>
